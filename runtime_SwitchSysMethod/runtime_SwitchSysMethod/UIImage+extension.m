@@ -17,6 +17,7 @@
     
      Method m2 = class_getClassMethod([UIImage class], @selector(MLimageNamed:));
   
+    //运行时与系统方法进行交换
     method_exchangeImplementations(m1, m2);
     
 }
