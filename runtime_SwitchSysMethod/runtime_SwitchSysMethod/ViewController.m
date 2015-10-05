@@ -22,7 +22,7 @@
     //1.当ios为8.0时图像正常显示为
     self.iconView.image = [UIImage imageNamed:@"icon"];
     
-    //2.当需要适配不同版本时,需要里德判断.
+    //2.当需要适配不同版本时,需要进行判断.
     
     
     

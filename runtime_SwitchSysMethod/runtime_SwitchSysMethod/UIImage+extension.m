@@ -12,7 +12,7 @@
 @implementation UIImage (extension)
 
 + (void)load {
-    
+    //因为imageNamed:是类方法,这里使用的是getClass,如果是对象方法应该使用getInstance
     Method m1 = class_getClassMethod([UIImage class], @selector(imageNamed:));
     
      Method m2 = class_getClassMethod([UIImage class], @selector(MLimageNamed:));
@@ -26,7 +26,7 @@
     double version = [[[UIDevice currentDevice] systemVersion] doubleValue];
     NSLog(@"%f",version);
     
-    //当系统版本大于8.0时使用下面的图像
+    //当系统版本大于8.0时使用下面的图像,否则使用控制器中赋值的图像
         if (version > 8.0) {
             name = [name stringByAppendingString:@"_os9"];
            
